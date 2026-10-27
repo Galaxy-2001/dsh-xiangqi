@@ -12,7 +12,13 @@
     { "name": "DeepSeek", "url": "https://www.deepseek.com/" },
     { "name": "Codex", "url": "https://github.com/codex" }
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Galaxy-2001/dsh-xiangqi.git"
+  },
+  "homepage": "https://github.com/Galaxy-2001/dsh-xiangqi#readme",
+  "bugs": "https://github.com/Galaxy-2001/dsh-xiangqi/issues",
   "keywords": ["dsh-plugin", "deepseek-harness", "xiangqi", "chinese-chess"],
   "scripts": {
     "test": "node test-engine.mjs && node --test test-client-state.mjs",

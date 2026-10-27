@@ -16,7 +16,8 @@
 对话应招与悔棋；0.1.1 的状态修复已通过自动化回归测试，完整桌面回归仍待进行。
 其他 DSH 版本、macOS 和 Linux 尚未实际验证。
 
-下载插件压缩包后，在它所在的目录执行：
+从 [v0.1.1 发布页](https://github.com/Galaxy-2001/dsh-xiangqi/releases/tag/v0.1.1)
+下载 `dsh-xiangqi-0.1.1.tgz`，在它所在的目录执行：
 
 ```powershell
 dsh plugin --profile desktop add ./dsh-xiangqi-0.1.1.tgz
@@ -24,7 +25,7 @@ dsh plugin --profile desktop add ./dsh-xiangqi-0.1.1.tgz
 
 Web 版将 `desktop` 替换为 `web`。回到 DSH 的「插件」页面启用中国象棋；
 若界面提示重启或刷新，按提示操作。DSH 的命令转发入口已用本机 `dsh plugin --help`
-核对；首次干净环境安装仍应在发布前做一次验证。
+核对；首次干净环境安装尚未实际验证。
 
 从源码开发和打包：
 
@@ -46,7 +47,7 @@ npm pack
 
 ## 使用
 
-1. 刷新 Harness 页面（插件是 link 安装，刷新后加载最新 Client 代码）。
+1. 安装并启用插件后刷新 Harness 页面，加载 Client 代码。
 2. 点左侧栏的棋子图标 → 右栏出现「中国象棋」棋盘。
 3. 点 **开始对局**（会在对话里告诉模型新开了一盘）。
 4. 点选自己的红棋，再点目标交叉点落子。
@@ -109,7 +110,6 @@ npm pack
 - 棋局保存在用户的 DSH 数据目录，源码仓库和插件包不包含棋局、聊天记录或账号配置。
 - 前端状态回归使用可控异步请求和轻量 hooks 测试环境，不等同于完整 DSH 界面测试。
 
-## 许可状态
+## 许可证
 
-目前标记为 `UNLICENSED`，尚未选择开源许可证。公开源码前由维护者确认许可；
-仅上传 GitHub 不会自动授予开源使用、修改或再分发许可。
+本项目采用 [MIT 许可证](LICENSE)。
