@@ -1,0 +1,51 @@
+{
+  "name": "dsh-xiangqi",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "description": "中国象棋：在对话里跟模型下一盘棋",
+  "author": {
+    "name": "Galaxy-2001",
+    "url": "https://github.com/Galaxy-2001"
+  },
+  "contributors": [
+    { "name": "DeepSeek", "url": "https://www.deepseek.com/" },
+    { "name": "Codex", "url": "https://github.com/codex" }
+  ],
+  "license": "UNLICENSED",
+  "keywords": ["dsh-plugin", "deepseek-harness", "xiangqi", "chinese-chess"],
+  "scripts": {
+    "test": "node test-engine.mjs && node --test test-client-state.mjs",
+    "check": "node --check index.js && node --check engine.js && node --check client.js",
+    "prepack": "npm run check && npm test"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./engine": "./engine.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "engine.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "CONTRIBUTORS.md",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

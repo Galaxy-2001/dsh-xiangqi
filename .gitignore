@@ -1,0 +1,11 @@
+node_modules/
+*.tgz
+*.zip
+*.log
+*.bak*
+.env
+.env.*
+.dsh/
+coverage/
+.DS_Store
+Thumbs.db
